@@ -2,142 +2,101 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>...</title>
-    <style type="text/css" media="all">
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      input[type="text"]{
-        color: white;
-        font-size: 17px;
-      }
-      input[type="email"]{
-        color: white;
-        font-size: 17px;
-      }
-      input[type="password"]{
-        color: white;
-        font-size: 17px;
-      }
-      input[type="submit"]{
-        color: white;
-        font-size: 17px;
-      }
-      .container{
-        width: 100%;
-        height: 100vh;
-        background: #222328;
-      }
-      .from-box{
-        width: 400px;
-        border: 1px solid #efefef;
-        padding: 20px 10px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-      }
-      .from-box h2{
-        color: white;
-        font-size: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 20px;  
-      }
-      form input{
-        width:100%;
-        padding: 12px 10px;
-        margin-top: 15px;
-        background: transparent;
-        outline: none;
-        border: 1.5px solid #37373D;
-        transition: .5s;
-      }
-      form input:focus{
-        border-color: #4752D0;
-      }
-      #massage{
-        position: absolute;
-        left: 15px;
-        bottom: 70px;
-        text-align: left;
-        color: white;
-        font-size: 15px;
-        display: none;
-      }
-      #password{
-        margin-bottom: 15px;
-      }
+    <title>Hello sir!</title>
+     
+      <style type="text/css" media="all">
+        
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          
+        }
+        .conatiner{
+          width: 100%;
+          height: 100vh;
+          text-align: center;
+          margin: auto;
+        }
+        .title h2{
+          background-color: black;
+          color: white;
+          padding: 20px;
+          font-weight: 600;
+          font-size: 30px;
+        }
+        i{
+          font-size: 18px;
+          margin-top:700px;
+          color: #bbb;
+          
+        }
+        img {
+         display: none;
+        }
+       #button,#first-magic{
+          padding: 10px 15px;
+          font-size: 17px;
+          font-weight: 600;
+          border: none;
+          background-color: greenyellow;
+          color: black;
+          border-radius: 3px;
+        }
+      </style>
       
-      form input:last-child{
-        width: 30%;
-        padding:9px;
-        border-radius: 3px;
-        transition: .3s;
-      }
-      input:last-child:focus{
-        background: #4E4F59;
-      }
-    </style>
   </head>
   <body>
     
-    <div class="container">
+    <div class="conatiner">
       
-      <div class="from-box">
-        <h2>Google</h2>
-        
-       <form action="" method="get" accept-charset="utf-8">
-         
-          <input type="text" name="text" id="text" placeholder="Name plz." required /> <br />
-        <input type="email" id="email" placeholder="Enter your email" required/> <br />
-          <input type="password" name="password" id="password" placeholder="Crate a password"/> 
-        <p id="massage">The password <span id="string"></span> </p>
+      <div class="title">
+        <h2>Welcome to this website</h2>
+      </div>
+      <br />
+      <br />
+      <i>if you want to see a magic then wait plz...</i>
+      <br />
+      <br />
+      <div class="fun">
+        <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCsex0bnUQjLsOgdE9WK2VZwiSy2Q7dPKFg&usqp=CAU" alt="" />
+        <br />
+        <br />
+        <button onclick="ok();" type="submit" id="first-magic">
+          see it !
+        </button>
+        <br />
+        <br />
+        <p>if click the button then you will see a magic</p>
+      <br />
+      <br />
       
-        <input type="submit" name="submit" id="submit" value="Log In" />
-         
-       </form>
+      <button id="first-magic"   type=" submit" onclick="see();">Massage</button>
       </div>
       
     </div>
-    
-    <script type="text/javascript" charset="utf-8">
+
+      <script type="text/javascript" charset="utf-8">
       
-     var pass = document.getElementById("password");
-     var mass = document.getElementById("massage");
-     var srtg = document.getElementById("string");
-     
-     addEventListener('input', () => {
+      
+      var imgs = document.getElementById('image');
+      var send = document.getElementById('first-magic');
+      
+     function ok(){
+        imgs.style.display = "block";
+        imgs.style.transition = "4s";
+        imgs.style.margin = "auto";
+        send.style.background = "transparent";
+      };
+      
+      var line = document.getElementById('first-magic');
+      
        
-       if(pass.value.length > 0){
-         mass.style.display = "block";
-       }
-      else{
-        mass.style.display = "none";
-        pass.style.borderColor = "#37373D";
+      function see(){
+        alert('Sorry Bro plz.. forgive me 🥺🤣 ');
       }
-      
-      if(pass.value.length > 0 && pass.value.length <= 4){
-        srtg.innerHTML = "wake";
-        pass.style.borderColor = "red";
-        mass.style.color = "red";
-      }
-      else if(pass.value.length >= 4 && pass.value.length < 8){
-          
-          srtg.innerHTML = "mediam";
-          pass.style.borderColor = "yellow";
-          mass.style.color = "yellow";
-        }
-      if(pass.value.length >= 8){
-        srtg.innerHTML = "strong";
-        pass.style.borderColor = "green";
-        mass.style.color = "green";
-      }
-     })
-      
-    </script>
     
+     </script>
+      
   </body>
 </html>
